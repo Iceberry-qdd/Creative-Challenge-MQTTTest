@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.iceberry.mqtttest.ui.fragment.HomeFragment"
+        android:label="消息"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_conversationFragment"
+            app:destination="@id/conversationFragment"
+            app:enterAnim="@anim/slide_in" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileDetailFragment"
+            app:destination="@id/profileDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/conversationFragment"
+        android:name="com.iceberry.mqtttest.ui.fragment.ConversationFragment"
+        android:label="对话"
+        tools:layout="@layout/conversation_fragment" />
+    <fragment
+        android:id="@+id/profileDetailFragment"
+        android:name="com.iceberry.mqtttest.ui.fragment.ProfileDetailFragment"
+        android:label="ProfileDetailFragment" />
+</navigation>
